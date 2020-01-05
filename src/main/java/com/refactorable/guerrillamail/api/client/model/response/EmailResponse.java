@@ -22,12 +22,12 @@ public class EmailResponse {
      *
      * @param id cannot be null
      * @param from cannot be blank
-     * @param recipient cannot be blank
+     * @param recipient
      * @param subject cannot be blank
      * @param excerpt cannot be blank
-     * @param body cannot be blank
+     * @param body
      * @param timestamp cannot be blank
-     * @param contentType cannot be blank
+     * @param contentType
      * @param read cannot be null
      */
     @JsonCreator
@@ -44,12 +44,9 @@ public class EmailResponse {
 
         Validate.notNull( id, "'sessionId' cannot be null" );
         Validate.notBlank( from, "'from' cannot be blank" );
-        Validate.notBlank( recipient, "'recipient' cannot be blank" );
         Validate.notBlank( subject, "'subject' cannot be blank" );
         Validate.notBlank( excerpt, "'excerpt' cannot be blank" );
-        Validate.notBlank( body, "'body' cannot be blank" );
         Validate.notBlank( timestamp, "'timestamp' cannot be blank" );
-        Validate.notBlank( contentType, "'contentType' cannot be blank" );
         Validate.notNull( read, "'read' cannot be null" );
 
         this.id = id;
